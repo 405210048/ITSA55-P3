@@ -1,0 +1,79 @@
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+#include <stdlib.h>
+#include<bits/stdc++.h>
+
+using namespace std;
+int main(void)
+{
+    int n, s,i,j,T;
+    cin>>T;
+    while(T--)
+    {
+        cin>>n>>s;
+        switch(s)
+        {
+        case 1:
+            for(i=0; i<n; i++)
+            {
+                for(j=0; j<n; j++)
+                {
+                    if(j!=0 && j!=n)
+                        cout<<' ';
+                    if(j+i == n-1)
+                        cout<<'*';
+                    else
+                        cout<<'x';
+                }
+                cout<<endl;
+            }
+            break;
+        case 2:
+            for(i=0; i<n; i++)
+            {
+                for(j=0; j<n; j++)
+                {
+                    if(j!=0 && j!=n)
+                        cout<<' ';
+                    if(i==j)
+                        cout<<'*';
+                    else
+                        cout<<'x';
+                }
+                cout<<endl;
+            }
+            break;
+        case 3:
+            for(i=0; i<n; i++)
+            {
+                for(j=0; j<n; j++)
+                {
+                    if(j!=0 && j!=n)
+                        cout<<' ';
+                    if(j == n-1)
+                        cout<<'*';
+                    else
+                        cout<<'x';
+                }
+                cout<<endl;
+            }
+            break;
+        case 4:
+            for(i=0; i<n; i++)
+            {
+                for(j=0; j<n; j++)
+                {
+                    if(j!=0 && j!=n)
+                        cout<<' ';
+                    if(j == 0)
+                        cout<<'*';
+                    else
+                        cout<<'x';
+                }
+                cout<<endl;
+            }
+            break;
+        }
+    }
+}
